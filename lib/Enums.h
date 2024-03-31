@@ -148,6 +148,7 @@ struct NodeShape {
     FOLDER,
     BOX3D,
     COMPONENT,
+    MRECORD,
     COUNT
   };
 

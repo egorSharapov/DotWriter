@@ -19,11 +19,10 @@ http://www.graphviz.org/content/attrs
 
 Building / Installing
 ---------------------
-```shell
-./autogen.sh
-./configure
-make
-sudo make install
+```
+mkdir build && cd build
+cmake ..
+cmake --build .
 ```
 
 Todo
