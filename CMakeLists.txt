@@ -26,6 +26,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD              14
     CXX_STANDARD_REQUIRED     YES
     CXX_EXTENSIONS            NO
+    POSITION_INDEPENDENT_CODE ${PIC_BUILD}
 )
 
 target_include_directories(${PROJECT_NAME} INTERFACE 

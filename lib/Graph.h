@@ -125,6 +125,7 @@ public:
    */
   Edge* AddEdge(Node* src, Node* dst);
   Edge* AddEdge(Node* src, Node* dst, const std::string& label);
+  Edge* AddEdge(Node* src, std::string src_port, std::string dst_port, std::string label);
 
   /**
    * Removes the edge from the graph. Note that this also deletes the GEdge

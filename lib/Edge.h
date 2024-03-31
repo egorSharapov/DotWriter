@@ -15,11 +15,14 @@ class Edge {
 private:
   Node * _src;
   Node * _dst;
+  std::string _src_port;
+  std::string _dst_port;
   std::string _label;
   EdgeAttributeSet _attributes;
 
 public:
   Edge(Node * src, Node * dst, std::string label = "");
+  Edge(Node *src, std::string src_port, std::string dst_port, std::string label = "");
 
   virtual ~Edge() {};
 
