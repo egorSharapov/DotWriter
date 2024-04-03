@@ -127,6 +127,12 @@ Edge *Graph::AddEdge(Node *src, std::string src_port, std::string dst_port, std:
   return edge;
 }
 
+Edge *Graph::AddEdge(Node *src, Node *dst, std::string src_port, std::string dst_port, std::string label) {
+  Edge *edge = new Edge(src, dst, std::move(src_port), std::move(dst_port), std::move(label));
+  _edges.push_back(edge);
+  return edge;
+}
+
 void Graph::RemoveEdge(Edge* edge) {
   std::vector<Edge*>::iterator it = std::find(_edges.begin(), _edges.end(),
     edge);

@@ -23,6 +23,7 @@ private:
 public:
   Edge(Node * src, Node * dst, std::string label = "");
   Edge(Node *src, std::string src_port, std::string dst_port, std::string label = "");
+  Edge(Node *src, Node *dst, std::string src_port, std::string dst_port, std::string label = "");
 
   virtual ~Edge() {};
 
