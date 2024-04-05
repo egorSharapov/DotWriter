@@ -2279,7 +2279,7 @@ public:
    * default case, the edge is aimed towards the center of the node, and then
    * clipped at the node boundary.
    */
-  ENUM_ATTRIBUTE(HEADPORT, HeadPort, CompassPoint)
+  STRING_ATTRIBUTE(HEADPORT, HeadPort)
 
   /**
    * If the edge has a headURL, this attribute determines which window of the
@@ -2512,7 +2512,7 @@ public:
   /**
    * Indicates where on the tail node to attach the tail of the edge.
    */
-  ENUM_ATTRIBUTE(TAILPORT, TailPort, CompassPoint)
+  STRING_ATTRIBUTE(TAILPORT, TailPort)
 
   /**
    * If the edge has a tailURL, this attribute determines which window of the
