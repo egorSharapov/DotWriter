@@ -2090,6 +2090,11 @@ public:
    * them, use the forcelabels attribute.
    */
   STRING_ATTRIBUTE(XLABEL, XLabel)
+
+
+  void SetHtmlLabel(std::string label) {
+    AddAttribute(new HTMLLabelAttribute("label", std::move(label)));
+  }
 };
 
 class EdgeAttributeSet : public AttributeSet {

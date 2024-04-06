@@ -15,30 +15,24 @@ namespace DotWriter {
 class Node : public Idable {
 private:
   std::string _label;
+  bool _is_html_like;
   NodeAttributeSet _attributes;
 
 public:
-  Node(const std::string& id, std::string label = "") :
-    Idable(id), _label(label) {
-  }
-  virtual ~Node() {};
+  Node(const std::string &id, std::string label = "", bool is_html_like = false)
+      : Idable(id), _label(label), _is_html_like(is_html_like) {}
+  virtual ~Node(){};
 
-  void Print(std::ostream& out);
+  void Print(std::ostream &out);
 
   /** Simple getters / setters **/
-  const std::string& GetLabel() {
-    return _label;
-  }
+  const std::string &GetLabel() { return _label; }
 
-  void SetLabel(std::string label) {
-    _label = label;
-  };
+  void SetLabel(std::string label) { _label = label; };
 
-  NodeAttributeSet& GetAttributes() {
-    return _attributes;
-  }
+  NodeAttributeSet &GetAttributes() { return _attributes; }
 };
 
-}  // namespace DotWriter
+} // namespace DotWriter
 
 #endif

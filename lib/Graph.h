@@ -106,8 +106,8 @@ public:
    * Constructs a Node object with the given label, adds it to the graph, and
    * returns it.
    */
-  Node* AddNode(const std::string& label);
-  Node* AddNode(const std::string& label, const std::string& id);
+  Node* AddNode(const std::string& label, bool is_html_like = false);
+  Node* AddNode(const std::string& label, const std::string& id, bool is_html_like = false);
 
   /**
    * Removes the node from the graph.

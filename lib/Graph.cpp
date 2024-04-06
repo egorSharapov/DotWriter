@@ -86,14 +86,14 @@ Node* Graph::AddNode() {
   return node;
 }
 
-Node* Graph::AddNode(const std::string& label) {
-  Node* node = new Node(_idManager->GetNodeId(), label);
+Node* Graph::AddNode(const std::string& label, bool is_html_like) {
+  Node* node = new Node(_idManager->GetNodeId(), label, is_html_like);
   _nodes.push_back(node);
   return node;
 }
 
-Node* Graph::AddNode(const std::string& label, const std::string& id) {
-  Node* node = new Node(_idManager->ValidateCustomId(id), label);
+Node* Graph::AddNode(const std::string& label, const std::string& id, bool is_html_like) {
+  Node* node = new Node(_idManager->ValidateCustomId(id), label, is_html_like);
   _nodes.push_back(node);
   return node;
 }
